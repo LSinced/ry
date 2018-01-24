@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <display-name></display-name>
+  <context-param>  
+    <param-name>country</param-name>  
+    <param-value>cn</param-value>  
+  </context-param>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ExcelFilter</servlet-name>
+    <servlet-class>com.ry.servlet.ExcelFilter</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ToMainServlet</servlet-name>
+    <servlet-class>com.ry.servlet.ToMainServlet</servlet-class>     
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>TestServlet</servlet-name>
+    <servlet-class>com.ry.servlet.TestServlet</servlet-class>
+    <init-param>  
+        <param-name>age</param-name>  
+        <param-value>21</param-value>  
+    </init-param>  
+    <init-param>  
+        <param-name>address</param-name>  
+        <param-value>nicai</param-value>  
+    </init-param>
+    <load-on-startup>-1</load-on-startup>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>TestHttpServlet</servlet-name>
+    <servlet-class>com.ry.servlet.TestHttpServlet</servlet-class>
+  </servlet>
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>ExcelFilter</servlet-name>
+    <url-pattern>/ExcelFilter</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ToMainServlet</servlet-name>
+    <url-pattern>/main</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TestServlet</servlet-name>
+    <url-pattern>/testservlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>TestHttpServlet</servlet-name>
+    <url-pattern>/testhttpservlet</url-pattern>
+  </servlet-mapping>	
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
